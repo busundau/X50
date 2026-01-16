@@ -1,0 +1,1577 @@
+Component: ARM Compiler 5.06 update 7 for Certification (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Small function inlining results
+
+Inlined total of 0 calls.
+
+==============================================================================
+
+Section Cross References
+
+    system_m051series.o(i.SystemCoreClockUpdate) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_m051series.o(i.SystemCoreClockUpdate) refers to system_m051series.o(.data) for .data
+    system_m051series.o(i.SystemCoreClockUpdate) refers to system_m051series.o(.constdata) for .constdata
+    startup_m051series.o(RESET) refers to startup_m051series.o(STACK) for __initial_sp
+    startup_m051series.o(RESET) refers to startup_m051series.o(.text) for Reset_Handler
+    startup_m051series.o(RESET) refers to retarget.o(.emb_text) for HardFault_Handler
+    startup_m051series.o(RESET) refers to ptspta_isr.o(i.EINT0_IRQHandler) for EINT0_IRQHandler
+    startup_m051series.o(RESET) refers to ptspta_isr.o(i.GPIOP0P1_IRQHandler) for GPIOP0P1_IRQHandler
+    startup_m051series.o(RESET) refers to ptspta_isr.o(i.GPIOP2P3P4_IRQHandler) for GPIOP2P3P4_IRQHandler
+    startup_m051series.o(RESET) refers to ptspta_isr.o(i.TMR0_IRQHandler) for TMR0_IRQHandler
+    startup_m051series.o(RESET) refers to ptspta_isr.o(i.TMR1_IRQHandler) for TMR1_IRQHandler
+    startup_m051series.o(.text) refers to system_m051series.o(i.SystemInit) for SystemInit
+    startup_m051series.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    retarget.o(.emb_text) refers to retarget.o(i.Hard_Fault_Handler) for Hard_Fault_Handler
+    retarget.o(i.Hard_Fault_Handler) refers to printf5.o(i.__0printf$5) for __2printf
+    retarget.o(i.Hard_Fault_Handler) refers to retarget.o(i.stackDump) for stackDump
+    retarget.o(i.SendChar) refers to retarget.o(i.SendChar_ToUART) for SendChar_ToUART
+    retarget.o(i._ttywrch) refers to retarget.o(i.SendChar_ToUART) for SendChar_ToUART
+    retarget.o(i.fgetc) refers to retarget.o(i.GetChar) for GetChar
+    retarget.o(i.fputc) refers to retarget.o(i.SendChar_ToUART) for SendChar_ToUART
+    retarget.o(i.stackDump) refers to printf5.o(i.__0printf$5) for __2printf
+    clk.o(i.CLK_DisableCKO) refers to clk.o(i.CLK_DisableModuleClock) for CLK_DisableModuleClock
+    clk.o(i.CLK_EnableCKO) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    clk.o(i.CLK_EnableCKO) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    clk.o(i.CLK_EnablePLL) refers to clk.o(i.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(i.CLK_EnablePLL) refers to uidiv.o(.text) for __aeabi_uidivmod
+    clk.o(i.CLK_GetCPUFreq) refers to system_m051series.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(i.CLK_GetCPUFreq) refers to system_m051series.o(.data) for SystemCoreClock
+    clk.o(i.CLK_GetHCLKFreq) refers to system_m051series.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(i.CLK_GetHCLKFreq) refers to system_m051series.o(.data) for SystemCoreClock
+    clk.o(i.CLK_GetPCLKFreq) refers to system_m051series.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(i.CLK_GetPCLKFreq) refers to system_m051series.o(.data) for SystemCoreClock
+    clk.o(i.CLK_SetCoreClock) refers to clk.o(i.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(i.CLK_SetCoreClock) refers to clk.o(i.CLK_EnablePLL) for CLK_EnablePLL
+    clk.o(i.CLK_SetCoreClock) refers to clk.o(i.CLK_SetHCLK) for CLK_SetHCLK
+    clk.o(i.CLK_SetHCLK) refers to clk.o(i.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(i.CLK_SetHCLK) refers to system_m051series.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    uart.o(i.CLK_GetPLLClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.UART_Open) refers to uart.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(i.UART_Open) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.UART_Open) refers to uart.o(.constdata) for .constdata
+    uart.o(i.UART_SelectIrDAMode) refers to uart.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(i.UART_SelectIrDAMode) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.UART_SelectIrDAMode) refers to uart.o(.constdata) for .constdata
+    uart.o(i.UART_SetLine_Config) refers to uart.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(i.UART_SetLine_Config) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.UART_SetLine_Config) refers to uart.o(.constdata) for .constdata
+    pwm.o(i.PWM_ConfigCaptureChannel) refers to memcpya.o(.text) for __aeabi_memcpy4
+    pwm.o(i.PWM_ConfigCaptureChannel) refers to uidiv.o(.text) for __aeabi_uidivmod
+    pwm.o(i.PWM_ConfigCaptureChannel) refers to system_m051series.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    pwm.o(i.PWM_ConfigCaptureChannel) refers to pwm.o(.constdata) for .constdata
+    pwm.o(i.PWM_ConfigCaptureChannel) refers to system_m051series.o(.data) for SystemCoreClock
+    pwm.o(i.PWM_ConfigOutputChannel) refers to memcpya.o(.text) for __aeabi_memcpy4
+    pwm.o(i.PWM_ConfigOutputChannel) refers to uidiv.o(.text) for __aeabi_uidivmod
+    pwm.o(i.PWM_ConfigOutputChannel) refers to system_m051series.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    pwm.o(i.PWM_ConfigOutputChannel) refers to pwm.o(.constdata) for .constdata
+    pwm.o(i.PWM_ConfigOutputChannel) refers to system_m051series.o(.data) for SystemCoreClock
+    i2c.o(i.I2C_GetBusClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    i2c.o(i.I2C_GetBusClockFreq) refers to system_m051series.o(.data) for SystemCoreClock
+    i2c.o(i.I2C_Open) refers to uidiv.o(.text) for __aeabi_uidivmod
+    i2c.o(i.I2C_Open) refers to system_m051series.o(.data) for SystemCoreClock
+    i2c.o(i.I2C_SetBusClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    i2c.o(i.I2C_SetBusClockFreq) refers to system_m051series.o(.data) for SystemCoreClock
+    fmc.o(i.FMC_ReadConfig) refers to fmc.o(i.FMC_Read) for FMC_Read
+    fmc.o(i.FMC_WriteConfig) refers to fmc.o(i.FMC_Read) for FMC_Read
+    ptspta_adc.o(i.ADC2Voltage) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ptspta_adc.o(i.GetADCValue) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_adc.o(i.ADC2Voltage) for ADC2Voltage
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_main.o(.data) for G_Current
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_main.o(.data) for gu32Current
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_main.o(.data) for gu32MaxCurrent
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_main.o(.data) for G_StartInAdc
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_main.o(.data) for G_NTC_PCB
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_main.o(.data) for G_NTC_Motor
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_adc.o(.data) for .data
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_adc.o(.bss) for .bss
+    ptspta_adc.o(i.GetADCValue) refers to ptspta_main.o(.data) for G_Voltage_Battery
+    ptspta_fmc.o(i.EraseFlash) refers to ptspta_fmc.o(i.SYS_UnlockReg) for SYS_UnlockReg
+    ptspta_fmc.o(i.ReadFlashData) refers to ptspta_fmc.o(i.SYS_UnlockReg) for SYS_UnlockReg
+    ptspta_fmc.o(i.SaveData2Flash) refers to ptspta_fmc.o(i.EraseFlash) for EraseFlash
+    ptspta_fmc.o(i.SaveData2Flash) refers to ptspta_fmc.o(i.SYS_UnlockReg) for SYS_UnlockReg
+    ptspta_init.o(i.ADC_Init) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    ptspta_init.o(i.ADC_Init) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    ptspta_init.o(i.ADC_Init) refers to adc.o(i.ADC_Open) for ADC_Open
+    ptspta_init.o(i.GPIO_Init) refers to gpio.o(i.GPIO_SetMode) for GPIO_SetMode
+    ptspta_init.o(i.GPIO_Init) refers to gpio.o(i.GPIO_EnableInt) for GPIO_EnableInt
+    ptspta_init.o(i.GPIO_Init) refers to ptspta_init.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    ptspta_init.o(i.I2C_Init) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    ptspta_init.o(i.I2C_Init) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    ptspta_init.o(i.I2C_Init) refers to sys.o(i.SYS_ResetModule) for SYS_ResetModule
+    ptspta_init.o(i.PWM_Init) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    ptspta_init.o(i.PWM_Init) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    ptspta_init.o(i.PWM_Init) refers to sys.o(i.SYS_ResetModule) for SYS_ResetModule
+    ptspta_init.o(i.PWM_Init) refers to pwm.o(i.PWM_EnableOutput) for PWM_EnableOutput
+    ptspta_init.o(i.PWM_Init) refers to pwm.o(i.PWM_ConfigOutputChannel) for PWM_ConfigOutputChannel
+    ptspta_init.o(i.PWM_Init) refers to pwm.o(i.PWM_Start) for PWM_Start
+    ptspta_init.o(i.PWM_Init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ptspta_init.o(i.PWM_Init) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_init.o(i.PWM_Init) refers to ptspta_main.o(.data) for G_PwmCMR
+    ptspta_init.o(i.PWM_Init) refers to ptspta_main.o(.data) for gu32MAXPWM
+    ptspta_init.o(i.PWM_Init) refers to ptspta_main.o(.data) for gu32MINPWM
+    ptspta_init.o(i.TIMER_Init) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    ptspta_init.o(i.TIMER_Init) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    ptspta_init.o(i.TIMER_Init) refers to ptspta_init.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    ptspta_init.o(i.UART0_Init) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    ptspta_init.o(i.UART0_Init) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    ptspta_init.o(i.UART0_Init) refers to sys.o(i.SYS_ResetModule) for SYS_ResetModule
+    ptspta_init.o(i.UART0_Init) refers to uart.o(i.UART_Open) for UART_Open
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_ID_Status
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_PwmCMR
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_ClutchBrakFlow
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_IsFirstBtnDwn
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_3STimeOut
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for TMR_PWROff_24S
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for TMR_PWROff_3S
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for TMR_Stop_10S
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for TMR_ReStart300ms
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for TMR_Double_Enalbe
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_ScrewLock
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_ReStar
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_Flg_ButtonUp
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_Flg_ButtonDown
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_MotorStatus
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_PCBStatus
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_BatteryStatus
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for G_Speed
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for gu32FastRpmQuarter
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for gu32SlowRpmHalf
+    ptspta_init.o(i.Variable_Init) refers to ptspta_main.o(.data) for gu8TurboCnt
+    ptspta_init.o(i.WDT_Init) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    ptspta_init.o(i.WDT_Init) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    ptspta_init.o(i.WDT_Init) refers to wdt.o(i.WDT_Open) for WDT_Open
+    ptspta_init.o(i.WDT_Init) refers to ptspta_init.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    ptspta_inputoutput.o(i.Buzzer_LED_Behaving) refers to ptspta_inputoutput.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    ptspta_inputoutput.o(i.Buzzer_LED_Behaving) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_inputoutput.o(i.Buzzer_LED_Behaving) refers to ptspta_inputoutput.o(.data) for .data
+    ptspta_inputoutput.o(i.Buzzer_LED_Behaving) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_inputoutput.o(i.Buzzer_LED_Behaving) refers to ptspta_main.o(.data) for TMR_PWROff_24S
+    ptspta_inputoutput.o(i.Buzzer_LED_Behaving) refers to ptspta_main.o(.data) for TMR_PWROff_3S
+    ptspta_inputoutput.o(i.Buzzer_LED_Behaving) refers to ptspta_main.o(.data) for G_Voltage_Battery
+    ptspta_inputoutput.o(i.Buzzer_LED_Behaving) refers to ptspta_main.o(.data) for StartButton
+    ptspta_inputoutput.o(i.CLK_SysTickLongDelay) refers to system_m051series.o(.data) for CyclesPerUs
+    ptspta_inputoutput.o(i.CheckDirection) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_inputoutput.o(i.CheckDirection) refers to ptspta_inputoutput.o(i.CLK_SysTickLongDelay) for CLK_SysTickLongDelay
+    ptspta_inputoutput.o(i.CheckDirection) refers to ptspta_init.o(i.WDT_Init) for WDT_Init
+    ptspta_inputoutput.o(i.CheckDirection) refers to ptspta_main.o(.data) for G_ScrewRPM
+    ptspta_inputoutput.o(i.CheckDirection) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_inputoutput.o(i.CheckDirection) refers to ptspta_main.o(.data) for gu8BrakeStop
+    ptspta_inputoutput.o(i.CheckDirection) refers to ptspta_inputoutput.o(.data) for .data
+    ptspta_inputoutput.o(i.LED_InterlaceFlicker) refers to ptspta_inputoutput.o(.data) for .data
+    ptspta_isr.o(i.CLK_SysTickLongDelay) refers to system_m051series.o(.data) for CyclesPerUs
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_isr.o(i.CLK_SysTickLongDelay) for CLK_SysTickLongDelay
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for StartButton
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_isr.o(.data) for .data
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_ClutchBrakFlow
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_Flg_ButtonDown
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_Flg_ButtonUp
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for TMR_ReStart300ms
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_ReStar
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_Current
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_BrakeCurrent
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_Count
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_Status_Item
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_Voltage_Battery
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorStall
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_ScrewRPM
+    ptspta_isr.o(i.EINT0_IRQHandler) refers to ptspta_main.o(.data) for G_MotorRPM
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_motor.o(i.MotorStart) for MotorStart
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_isr.o(.data) for .data
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for G_MotorStatus
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorRuning_1Min
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for StartButton
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorStall
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for TMR_CalcRPM
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for G_ReStar
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for G_MotorRPM
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for G_ScrewRPM
+    ptspta_isr.o(i.GPIOP0P1_IRQHandler) refers to ptspta_main.o(.data) for G_ClutchBrakFlow
+    ptspta_isr.o(i.GPIOP2P3P4_IRQHandler) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_isr.o(i.LED_Flicker_B) refers to ptspta_isr.o(i.CLK_SysTickLongDelay) for CLK_SysTickLongDelay
+    ptspta_isr.o(i.LED_Flicker_B) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_isr.o(i.LED_Flicker_B) refers to ptspta_fmc.o(i.ReadFlashData) for ReadFlashData
+    ptspta_isr.o(i.LED_Flicker_B) refers to ptspta_fmc.o(i.SaveData2Flash) for SaveData2Flash
+    ptspta_isr.o(i.LED_Flicker_B) refers to ptspta_isr.o(.data) for .data
+    ptspta_isr.o(i.LED_Flicker_B) refers to ptspta_main.o(.data) for G_Status_Item
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_isr.o(.data) for .data
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for G_StartInAdc
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for StartButton
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_Double_Enalbe
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_ID_OK
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_CalcRPM
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_PWROff_24S
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_Stop_10S
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_PWROff_3S
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorRuning_1Min
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorTempOverHeat_3S
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_PCBTempOverHeat_3S
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorStall
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for TMR_ReStart300ms
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for G_ScrewRPM
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for gu8TurboCnt
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for G_PwmCMR
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for gu8StartSpeed
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for G_ClutchBrakFlow
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for G_MotorStatus
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for G_ReStar
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_motor.o(i.SetPWMCMR) for SetPWMCMR
+    ptspta_isr.o(i.TMR0_IRQHandler) refers to ptspta_main.o(.data) for gu32MAXPWM
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_adc.o(i.GetADCValue) for GetADCValue
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_inputoutput.o(i.Buzzer_LED_Behaving) for Buzzer_LED_Behaving
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_inputoutput.o(i.CheckDirection) for CheckDirection
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_isr.o(i.CLK_SysTickLongDelay) for CLK_SysTickLongDelay
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_isr.o(.data) for .data
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_ID_Status
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_PWROff_3S
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_PWROff_24S
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_Voltage_Battery
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_PwmCMR
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_StartInAdc
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_Flg_ButtonUp
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_PCBStatus
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_NTC_Motor
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_NTC_PCB
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for gu32MaxCurrent
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_Current
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_ScrewRPM
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_ReStart300ms
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for StartButton
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_ReStar
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorRuning_1Min
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_3STimeOut
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_Flg_ButtonDown
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_MotorStatus
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_BatteryStatus
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_Status_Item
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_motor.o(i.MotorStart) for MotorStart
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_init.o(i.WDT_Init) for WDT_Init
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_isr.o(i.LED_Flicker_B) for LED_Flicker_B
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for gu8TurboCnt
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for gu8StartSpeed
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_ID_OK
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_StartupDirectin
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_Stop_10S
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_IsFirstBtnDwn
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_BrakeCurrent
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorStall
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_ScrewLock
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_MotorTempOverHeat_3S
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_ClutchBrakFlow
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for gu8BrakeStop
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for TMR_Double_Enalbe
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_protection.o(i.PCB_Temperature_Check) for PCB_Temperature_Check
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_protection.o(i.Motor_Temperature_Check) for Motor_Temperature_Check
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_protection.o(i.OverCurrent_Check) for OverCurrent_Check
+    ptspta_isr.o(i.TMR1_IRQHandler) refers to ptspta_main.o(.data) for G_MotorRPM
+    ptspta_main.o(i.SYS_Init) refers to clk.o(i.CLK_EnableXtalRC) for CLK_EnableXtalRC
+    ptspta_main.o(i.SYS_Init) refers to clk.o(i.CLK_WaitClockReady) for CLK_WaitClockReady
+    ptspta_main.o(i.SYS_Init) refers to clk.o(i.CLK_SetHCLK) for CLK_SetHCLK
+    ptspta_main.o(i.SYS_Init) refers to clk.o(i.CLK_SetCoreClock) for CLK_SetCoreClock
+    ptspta_main.o(i.main) refers to ptspta_main.o(i.SYS_Init) for SYS_Init
+    ptspta_main.o(i.main) refers to ptspta_init.o(i.Variable_Init) for Variable_Init
+    ptspta_main.o(i.main) refers to ptspta_init.o(i.GPIO_Init) for GPIO_Init
+    ptspta_main.o(i.main) refers to ptspta_init.o(i.UART0_Init) for UART0_Init
+    ptspta_main.o(i.main) refers to ptspta_init.o(i.PWM_Init) for PWM_Init
+    ptspta_main.o(i.main) refers to ptspta_init.o(i.I2C_Init) for I2C_Init
+    ptspta_main.o(i.main) refers to ptspta_init.o(i.ADC_Init) for ADC_Init
+    ptspta_main.o(i.main) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_main.o(i.main) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ptspta_main.o(i.main) refers to ptspta_adc.o(i.GetADCValue) for GetADCValue
+    ptspta_main.o(i.main) refers to ptspta_init.o(i.TIMER_Init) for TIMER_Init
+    ptspta_main.o(i.main) refers to ptspta_inputoutput.o(i.CheckDirection) for CheckDirection
+    ptspta_main.o(i.main) refers to ptspta_main.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    ptspta_main.o(i.main) refers to ptspta_init.o(i.WDT_Init) for WDT_Init
+    ptspta_main.o(i.main) refers to system_m051series.o(.data) for SystemCoreClock
+    ptspta_main.o(i.main) refers to ptspta_main.o(.data) for .data
+    ptspta_motor.o(i.Motor) refers to ptspta_motor.o(i.SetPWMCMR) for SetPWMCMR
+    ptspta_motor.o(i.Motor) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_motor.o(i.Motor) refers to ptspta_main.o(.data) for G_ScrewRPM
+    ptspta_motor.o(i.Motor) refers to ptspta_main.o(.data) for G_MotorRPM
+    ptspta_motor.o(i.Motor) refers to system_m051series.o(.data) for CyclesPerUs
+    ptspta_motor.o(i.Motor) refers to ptspta_main.o(.data) for TMR_ReStart300ms
+    ptspta_motor.o(i.Motor) refers to ptspta_main.o(.data) for G_ReStar
+    ptspta_motor.o(i.MotorStart) refers to ptspta_inputoutput.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    ptspta_motor.o(i.MotorStart) refers to ptspta_main.o(.data) for StartButton
+    ptspta_motor.o(i.MotorStart) refers to ptspta_main.o(.data) for G_ReStar
+    ptspta_motor.o(i.MotorStart) refers to ptspta_main.o(.data) for TMR_MotorRuning_1Min
+    ptspta_nvram.o(i.CHECK_ID) refers to ptspta_nvram.o(i.Read_24LC02) for Read_24LC02
+    ptspta_nvram.o(i.CHECK_ID) refers to ptspta_main.o(.data) for G_Error_EEPROM
+    ptspta_nvram.o(i.CLK_SysTickLongDelay) refers to system_m051series.o(.data) for CyclesPerUs
+    ptspta_nvram.o(i.CheckBatteryType) refers to clk.o(i.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    ptspta_nvram.o(i.CheckBatteryType) refers to i2c.o(i.I2C_Open) for I2C_Open
+    ptspta_nvram.o(i.CheckBatteryType) refers to i2c.o(i.I2C_Trigger) for I2C_Trigger
+    ptspta_nvram.o(i.CheckBatteryType) refers to ptspta_nvram.o(i.CLK_SysTickLongDelay) for CLK_SysTickLongDelay
+    ptspta_nvram.o(i.CheckBatteryType) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_nvram.o(i.CheckBatteryType) refers to sys.o(i.SYS_ResetModule) for SYS_ResetModule
+    ptspta_nvram.o(i.CheckBatteryType) refers to system_m051series.o(.data) for SystemCoreClock
+    ptspta_nvram.o(i.Read_24LC02) refers to clk.o(i.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    ptspta_nvram.o(i.Read_24LC02) refers to i2c.o(i.I2C_Open) for I2C_Open
+    ptspta_nvram.o(i.Read_24LC02) refers to i2c.o(i.I2C_Trigger) for I2C_Trigger
+    ptspta_nvram.o(i.Read_24LC02) refers to i2c.o(i.I2C_Close) for I2C_Close
+    ptspta_nvram.o(i.Read_24LC02) refers to system_m051series.o(.data) for SystemCoreClock
+    ptspta_nvram.o(i.Write_24LC02) refers to clk.o(i.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    ptspta_nvram.o(i.Write_24LC02) refers to i2c.o(i.I2C_Open) for I2C_Open
+    ptspta_nvram.o(i.Write_24LC02) refers to i2c.o(i.I2C_Trigger) for I2C_Trigger
+    ptspta_nvram.o(i.Write_24LC02) refers to i2c.o(i.I2C_Close) for I2C_Close
+    ptspta_nvram.o(i.Write_24LC02) refers to system_m051series.o(.data) for SystemCoreClock
+    ptspta_protection.o(i.BatteryNTC_Check) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_protection.o(i.BatteryNTC_Check) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_protection.o(i.BatteryNTC_Check) refers to ptspta_main.o(.data) for G_BatteryStatus
+    ptspta_protection.o(i.BatteryNTC_Check) refers to ptspta_main.o(.data) for G_NTC_Battery
+    ptspta_protection.o(i.BatteryNTC_Check) refers to ptspta_protection.o(.data) for .data
+    ptspta_protection.o(i.BatteryNTC_Check) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_protection.o(i.BatteryNTC_Check) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_protection.o(i.Motor_Temperature_Check) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_protection.o(i.Motor_Temperature_Check) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_protection.o(i.Motor_Temperature_Check) refers to ptspta_main.o(.data) for G_MotorStatus
+    ptspta_protection.o(i.Motor_Temperature_Check) refers to ptspta_main.o(.data) for G_NTC_Motor
+    ptspta_protection.o(i.Motor_Temperature_Check) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_protection.o(i.Motor_Temperature_Check) refers to ptspta_protection.o(.data) for .data
+    ptspta_protection.o(i.Motor_Temperature_Check) refers to ptspta_main.o(.data) for G_ScrewRPM
+    ptspta_protection.o(i.Motor_Temperature_Check) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_protection.o(i.OverCurrent_Check) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_protection.o(i.OverCurrent_Check) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_protection.o(i.OverCurrent_Check) refers to ptspta_protection.o(.data) for .data
+    ptspta_protection.o(i.OverCurrent_Check) refers to ptspta_main.o(.data) for G_Current
+    ptspta_protection.o(i.OverCurrent_Check) refers to ptspta_main.o(.data) for G_Direction
+    ptspta_protection.o(i.OverCurrent_Check) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_protection.o(i.OverCurrent_Check) refers to ptspta_main.o(.data) for G_MotorStatus
+    ptspta_protection.o(i.PCB_Temperature_Check) refers to printf5.o(i.__0printf$5) for __2printf
+    ptspta_protection.o(i.PCB_Temperature_Check) refers to ptspta_motor.o(i.Motor) for Motor
+    ptspta_protection.o(i.PCB_Temperature_Check) refers to ptspta_main.o(.data) for G_PCBStatus
+    ptspta_protection.o(i.PCB_Temperature_Check) refers to ptspta_main.o(.data) for G_NTC_PCB
+    ptspta_protection.o(i.PCB_Temperature_Check) refers to ptspta_main.o(.data) for G_BuzzerLED
+    ptspta_protection.o(i.PCB_Temperature_Check) refers to ptspta_protection.o(.data) for .data
+    ptspta_protection.o(i.PCB_Temperature_Check) refers to ptspta_main.o(.data) for G_ScrewRPM
+    ptspta_protection.o(i.PCB_Temperature_Check) refers to ptspta_main.o(.data) for G_Direction
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to retarget.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to retarget.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to retarget.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to retarget.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to retarget.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to retarget.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to retarget.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to retarget.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to retarget.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to retarget.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to retarget.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to retarget.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to retarget.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to retarget.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to retarget.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to retarget.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to retarget.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to retarget.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to retarget.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to retarget.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to retarget.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to retarget.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_m051series.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_m051series.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to ptspta_main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to ptspta_main.o(i.main) for main
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_m051series.o(.rev16_text), (4 bytes).
+    Removing system_m051series.o(.revsh_text), (4 bytes).
+    Removing startup_m051series.o(HEAP), (0 bytes).
+    Removing retarget.o(.rev16_text), (4 bytes).
+    Removing retarget.o(.revsh_text), (4 bytes).
+    Removing retarget.o(i.GetChar), (20 bytes).
+    Removing retarget.o(i.IsDebugFifoEmpty), (16 bytes).
+    Removing retarget.o(i.SendChar), (8 bytes).
+    Removing retarget.o(i._ttywrch), (8 bytes).
+    Removing retarget.o(i.ferror), (6 bytes).
+    Removing retarget.o(i.fgetc), (8 bytes).
+    Removing retarget.o(i.kbhit), (16 bytes).
+    Removing retarget.o(.data), (4 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(i.GPIO_DisableInt), (28 bytes).
+    Removing clk.o(.rev16_text), (4 bytes).
+    Removing clk.o(.revsh_text), (4 bytes).
+    Removing clk.o(i.CLK_DisableCKO), (16 bytes).
+    Removing clk.o(i.CLK_DisableModuleClock), (28 bytes).
+    Removing clk.o(i.CLK_DisablePLL), (16 bytes).
+    Removing clk.o(i.CLK_DisableSysTick), (12 bytes).
+    Removing clk.o(i.CLK_DisableXtalRC), (16 bytes).
+    Removing clk.o(i.CLK_EnableCKO), (44 bytes).
+    Removing clk.o(i.CLK_EnableSysTick), (56 bytes).
+    Removing clk.o(i.CLK_GetCPUFreq), (16 bytes).
+    Removing clk.o(i.CLK_GetHCLKFreq), (16 bytes).
+    Removing clk.o(i.CLK_GetHXTFreq), (20 bytes).
+    Removing clk.o(i.CLK_GetPCLKFreq), (16 bytes).
+    Removing clk.o(i.CLK_Idle), (32 bytes).
+    Removing clk.o(i.CLK_PowerDown), (36 bytes).
+    Removing clk.o(i.CLK_SetSysTickClockSrc), (20 bytes).
+    Removing sys.o(.rev16_text), (4 bytes).
+    Removing sys.o(.revsh_text), (4 bytes).
+    Removing sys.o(i.SYS_ClearResetSrc), (12 bytes).
+    Removing sys.o(i.SYS_DisableBOD), (14 bytes).
+    Removing sys.o(i.SYS_EnableBOD), (36 bytes).
+    Removing sys.o(i.SYS_GetBODStatus), (12 bytes).
+    Removing sys.o(i.SYS_GetResetSrc), (8 bytes).
+    Removing sys.o(i.SYS_IsRegLocked), (16 bytes).
+    Removing sys.o(i.SYS_ReadPDID), (8 bytes).
+    Removing sys.o(i.SYS_ResetCPU), (14 bytes).
+    Removing sys.o(i.SYS_ResetChip), (14 bytes).
+    Removing uart.o(.rev16_text), (4 bytes).
+    Removing uart.o(.revsh_text), (4 bytes).
+    Removing uart.o(i.UART_ClearIntFlag), (48 bytes).
+    Removing uart.o(i.UART_Close), (6 bytes).
+    Removing uart.o(i.UART_DisableFlowCtrl), (12 bytes).
+    Removing uart.o(i.UART_DisableInt), (36 bytes).
+    Removing uart.o(i.UART_EnableFlowCtrl), (30 bytes).
+    Removing uart.o(i.UART_EnableInt), (36 bytes).
+    Removing uart.o(i.UART_Read), (44 bytes).
+    Removing uart.o(i.UART_SelectIrDAMode), (132 bytes).
+    Removing uart.o(i.UART_SelectLINMode), (24 bytes).
+    Removing uart.o(i.UART_SelectRS485Mode), (32 bytes).
+    Removing uart.o(i.UART_SetLine_Config), (128 bytes).
+    Removing uart.o(i.UART_SetTimeoutCnt), (22 bytes).
+    Removing uart.o(i.UART_Write), (44 bytes).
+    Removing pwm.o(.rev16_text), (4 bytes).
+    Removing pwm.o(.revsh_text), (4 bytes).
+    Removing pwm.o(i.PWM_ClearADCTriggerFlag), (10 bytes).
+    Removing pwm.o(i.PWM_ClearCaptureIntFlag), (56 bytes).
+    Removing pwm.o(i.PWM_ClearDutyIntFlag), (10 bytes).
+    Removing pwm.o(i.PWM_ClearPeriodIntFlag), (8 bytes).
+    Removing pwm.o(i.PWM_ConfigCaptureChannel), (284 bytes).
+    Removing pwm.o(i.PWM_DisableADCTrigger), (16 bytes).
+    Removing pwm.o(i.PWM_DisableCapture), (62 bytes).
+    Removing pwm.o(i.PWM_DisableCaptureInt), (32 bytes).
+    Removing pwm.o(i.PWM_DisableDeadZone), (14 bytes).
+    Removing pwm.o(i.PWM_DisableDutyInt), (14 bytes).
+    Removing pwm.o(i.PWM_DisableOutput), (8 bytes).
+    Removing pwm.o(i.PWM_DisablePeriodInt), (12 bytes).
+    Removing pwm.o(i.PWM_EnableADCTrigger), (22 bytes).
+    Removing pwm.o(i.PWM_EnableCapture), (62 bytes).
+    Removing pwm.o(i.PWM_EnableCaptureInt), (28 bytes).
+    Removing pwm.o(i.PWM_EnableDeadZone), (36 bytes).
+    Removing pwm.o(i.PWM_EnableDutyInt), (30 bytes).
+    Removing pwm.o(i.PWM_EnablePeriodInt), (28 bytes).
+    Removing pwm.o(i.PWM_ForceStop), (38 bytes).
+    Removing pwm.o(i.PWM_GetADCTriggerFlag), (16 bytes).
+    Removing pwm.o(i.PWM_GetCaptureIntFlag), (34 bytes).
+    Removing pwm.o(i.PWM_GetDutyIntFlag), (16 bytes).
+    Removing pwm.o(i.PWM_GetPeriodIntFlag), (14 bytes).
+    Removing pwm.o(i.PWM_Stop), (32 bytes).
+    Removing adc.o(.rev16_text), (4 bytes).
+    Removing adc.o(.revsh_text), (4 bytes).
+    Removing adc.o(i.ADC_Close), (22 bytes).
+    Removing adc.o(i.ADC_DisableHWTrigger), (20 bytes).
+    Removing adc.o(i.ADC_DisableInt), (44 bytes).
+    Removing adc.o(i.ADC_EnableHWTrigger), (60 bytes).
+    Removing adc.o(i.ADC_EnableInt), (44 bytes).
+    Removing i2c.o(.rev16_text), (4 bytes).
+    Removing i2c.o(.revsh_text), (4 bytes).
+    Removing i2c.o(i.I2C_ClearTimeoutFlag), (10 bytes).
+    Removing i2c.o(i.I2C_Close), (56 bytes).
+    Removing i2c.o(i.I2C_DisableInt), (10 bytes).
+    Removing i2c.o(i.I2C_DisableTimeout), (10 bytes).
+    Removing i2c.o(i.I2C_DisableWakeup), (10 bytes).
+    Removing i2c.o(i.I2C_EnableInt), (10 bytes).
+    Removing i2c.o(i.I2C_EnableTimeout), (26 bytes).
+    Removing i2c.o(i.I2C_EnableWakeup), (10 bytes).
+    Removing i2c.o(i.I2C_GetBusClockFreq), (24 bytes).
+    Removing i2c.o(i.I2C_GetData), (6 bytes).
+    Removing i2c.o(i.I2C_GetIntFlag), (8 bytes).
+    Removing i2c.o(i.I2C_GetStatus), (4 bytes).
+    Removing i2c.o(i.I2C_Open), (56 bytes).
+    Removing i2c.o(i.I2C_SetBusClockFreq), (48 bytes).
+    Removing i2c.o(i.I2C_SetData), (4 bytes).
+    Removing i2c.o(i.I2C_SetSlaveAddr), (32 bytes).
+    Removing i2c.o(i.I2C_SetSlaveAddrMask), (30 bytes).
+    Removing i2c.o(i.I2C_Trigger), (48 bytes).
+    Removing fmc.o(.rev16_text), (4 bytes).
+    Removing fmc.o(.revsh_text), (4 bytes).
+    Removing fmc.o(i.FMC_Close), (16 bytes).
+    Removing fmc.o(i.FMC_DisableAPUpdate), (16 bytes).
+    Removing fmc.o(i.FMC_DisableConfigUpdate), (16 bytes).
+    Removing fmc.o(i.FMC_DisableLDUpdate), (16 bytes).
+    Removing fmc.o(i.FMC_EnableAPUpdate), (16 bytes).
+    Removing fmc.o(i.FMC_EnableConfigUpdate), (16 bytes).
+    Removing fmc.o(i.FMC_EnableLDUpdate), (16 bytes).
+    Removing fmc.o(i.FMC_GetBootSource), (20 bytes).
+    Removing fmc.o(i.FMC_Open), (16 bytes).
+    Removing fmc.o(i.FMC_Read), (32 bytes).
+    Removing fmc.o(i.FMC_ReadConfig), (34 bytes).
+    Removing fmc.o(i.FMC_ReadDataFlashBaseAddr), (12 bytes).
+    Removing fmc.o(i.FMC_SetBootSource), (24 bytes).
+    Removing fmc.o(i.FMC_WriteConfig), (76 bytes).
+    Removing wdt.o(.rev16_text), (4 bytes).
+    Removing wdt.o(.revsh_text), (4 bytes).
+    Removing ptspta_adc.o(.rev16_text), (4 bytes).
+    Removing ptspta_adc.o(.revsh_text), (4 bytes).
+    Removing ptspta_fmc.o(.rev16_text), (4 bytes).
+    Removing ptspta_fmc.o(.revsh_text), (4 bytes).
+    Removing ptspta_fmc.o(.bss), (2048 bytes).
+    Removing ptspta_init.o(.rev16_text), (4 bytes).
+    Removing ptspta_init.o(.revsh_text), (4 bytes).
+    Removing ptspta_inputoutput.o(.rev16_text), (4 bytes).
+    Removing ptspta_inputoutput.o(.revsh_text), (4 bytes).
+    Removing ptspta_inputoutput.o(i.LED_InterlaceFlicker), (60 bytes).
+    Removing ptspta_inputoutput.o(i.vOscillation_P30), (24 bytes).
+    Removing ptspta_isr.o(.rev16_text), (4 bytes).
+    Removing ptspta_isr.o(.revsh_text), (4 bytes).
+    Removing ptspta_isr.o(i.PowerDownFunction), (40 bytes).
+    Removing ptspta_main.o(.rev16_text), (4 bytes).
+    Removing ptspta_main.o(.revsh_text), (4 bytes).
+    Removing ptspta_main.o(.data), (1 bytes).
+    Removing ptspta_main.o(.data), (4 bytes).
+    Removing ptspta_main.o(.data), (1 bytes).
+    Removing ptspta_main.o(.data), (1 bytes).
+    Removing ptspta_main.o(.data), (4 bytes).
+    Removing ptspta_main.o(.data), (1 bytes).
+    Removing ptspta_motor.o(.rev16_text), (4 bytes).
+    Removing ptspta_motor.o(.revsh_text), (4 bytes).
+    Removing ptspta_nvram.o(.rev16_text), (4 bytes).
+    Removing ptspta_nvram.o(.revsh_text), (4 bytes).
+    Removing ptspta_nvram.o(i.CHECK_ID), (40 bytes).
+    Removing ptspta_nvram.o(i.CLK_SysTickLongDelay), (64 bytes).
+    Removing ptspta_nvram.o(i.CheckBatteryType), (280 bytes).
+    Removing ptspta_nvram.o(i.Read_24LC02), (396 bytes).
+    Removing ptspta_nvram.o(i.Write_24LC02), (320 bytes).
+    Removing ptspta_protection.o(.rev16_text), (4 bytes).
+    Removing ptspta_protection.o(.revsh_text), (4 bytes).
+    Removing ptspta_protection.o(i.BatteryNTC_Check), (156 bytes).
+    Removing dadd.o(.text), (360 bytes).
+    Removing dmul.o(.text), (208 bytes).
+    Removing ddiv.o(.text), (240 bytes).
+    Removing dfixul.o(.text), (64 bytes).
+    Removing cdrcmple.o(.text), (40 bytes).
+    Removing depilogue.o(.text), (190 bytes).
+    Removing depilogue.o(i.__ARM_clz), (46 bytes).
+
+170 unused section(s) (total 7734 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  startup_m051series.o(RESET)
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    CMSIS\\system_M051Series.c               0x00000000   Number         0  system_m051series.o ABSOLUTE
+    CMSIS\startup_M051Series.s               0x00000000   Number         0  startup_m051series.o ABSOLUTE
+    CMSIS\system_M051Series.c                0x00000000   Number         0  system_m051series.o ABSOLUTE
+    Library\\adc.c                           0x00000000   Number         0  adc.o ABSOLUTE
+    Library\\clk.c                           0x00000000   Number         0  clk.o ABSOLUTE
+    Library\\fmc.c                           0x00000000   Number         0  fmc.o ABSOLUTE
+    Library\\gpio.c                          0x00000000   Number         0  gpio.o ABSOLUTE
+    Library\\i2c.c                           0x00000000   Number         0  i2c.o ABSOLUTE
+    Library\\pwm.c                           0x00000000   Number         0  pwm.o ABSOLUTE
+    Library\\retarget.c                      0x00000000   Number         0  retarget.o ABSOLUTE
+    Library\\sys.c                           0x00000000   Number         0  sys.o ABSOLUTE
+    Library\\uart.c                          0x00000000   Number         0  uart.o ABSOLUTE
+    Library\\wdt.c                           0x00000000   Number         0  wdt.o ABSOLUTE
+    Library\adc.c                            0x00000000   Number         0  adc.o ABSOLUTE
+    Library\clk.c                            0x00000000   Number         0  clk.o ABSOLUTE
+    Library\fmc.c                            0x00000000   Number         0  fmc.o ABSOLUTE
+    Library\gpio.c                           0x00000000   Number         0  gpio.o ABSOLUTE
+    Library\i2c.c                            0x00000000   Number         0  i2c.o ABSOLUTE
+    Library\pwm.c                            0x00000000   Number         0  pwm.o ABSOLUTE
+    Library\retarget.c                       0x00000000   Number         0  retarget.o ABSOLUTE
+    Library\sys.c                            0x00000000   Number         0  sys.o ABSOLUTE
+    Library\uart.c                           0x00000000   Number         0  uart.o ABSOLUTE
+    Library\wdt.c                            0x00000000   Number         0  wdt.o ABSOLUTE
+    Source\PtsPta_ADC.c                      0x00000000   Number         0  ptspta_adc.o ABSOLUTE
+    Source\PtsPta_FMC.c                      0x00000000   Number         0  ptspta_fmc.o ABSOLUTE
+    Source\PtsPta_ISR.c                      0x00000000   Number         0  ptspta_isr.o ABSOLUTE
+    Source\PtsPta_Init.c                     0x00000000   Number         0  ptspta_init.o ABSOLUTE
+    Source\PtsPta_InputOutput.c              0x00000000   Number         0  ptspta_inputoutput.o ABSOLUTE
+    Source\PtsPta_Motor.c                    0x00000000   Number         0  ptspta_motor.o ABSOLUTE
+    Source\PtsPta_NVRAM.c                    0x00000000   Number         0  ptspta_nvram.o ABSOLUTE
+    Source\PtsPta_Protection.c               0x00000000   Number         0  ptspta_protection.o ABSOLUTE
+    Source\PtsPta_main.c                     0x00000000   Number         0  ptspta_main.o ABSOLUTE
+    Source\\PtsPta_ADC.c                     0x00000000   Number         0  ptspta_adc.o ABSOLUTE
+    Source\\PtsPta_FMC.c                     0x00000000   Number         0  ptspta_fmc.o ABSOLUTE
+    Source\\PtsPta_ISR.c                     0x00000000   Number         0  ptspta_isr.o ABSOLUTE
+    Source\\PtsPta_Init.c                    0x00000000   Number         0  ptspta_init.o ABSOLUTE
+    Source\\PtsPta_InputOutput.c             0x00000000   Number         0  ptspta_inputoutput.o ABSOLUTE
+    Source\\PtsPta_Motor.c                   0x00000000   Number         0  ptspta_motor.o ABSOLUTE
+    Source\\PtsPta_NVRAM.c                   0x00000000   Number         0  ptspta_nvram.o ABSOLUTE
+    Source\\PtsPta_Protection.c              0x00000000   Number         0  ptspta_protection.o ABSOLUTE
+    Source\\PtsPta_main.c                    0x00000000   Number         0  ptspta_main.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000E                 0x000000d0   Section        4  entry12b.o(.ARM.Collect$$$$0000000E)
+    .ARM.Collect$$$$0000000F                 0x000000d4   Section        0  entry10a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00000011                 0x000000d4   Section        0  entry11a.o(.ARM.Collect$$$$00000011)
+    .ARM.Collect$$$$00002712                 0x000000d4   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000d4   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .emb_text                                0x000000d8   Section       28  retarget.o(.emb_text)
+    .text                                    0x000000f4   Section       76  startup_m051series.o(.text)
+    Default_Handler                          0x0000011f   Thumb Code     2  startup_m051series.o(.text)
+    .text                                    0x00000140   Section        0  uidiv.o(.text)
+    .text                                    0x0000016c   Section        0  memcpya.o(.text)
+    .text                                    0x00000190   Section        0  uldiv.o(.text)
+    .text                                    0x000001f0   Section       36  init.o(.text)
+    .text                                    0x00000214   Section        0  llshl.o(.text)
+    .text                                    0x00000234   Section        0  llushr.o(.text)
+    i.ADC2Voltage                            0x00000258   Section        0  ptspta_adc.o(i.ADC2Voltage)
+    i.ADC_Init                               0x0000026c   Section        0  ptspta_init.o(i.ADC_Init)
+    i.ADC_Open                               0x000002a4   Section        0  adc.o(i.ADC_Open)
+    i.Buzzer_LED_Behaving                    0x000002c8   Section        0  ptspta_inputoutput.o(i.Buzzer_LED_Behaving)
+    i.CLK_EnableModuleClock                  0x00000570   Section        0  clk.o(i.CLK_EnableModuleClock)
+    i.CLK_EnablePLL                          0x0000058c   Section        0  clk.o(i.CLK_EnablePLL)
+    i.CLK_EnableXtalRC                       0x00000724   Section        0  clk.o(i.CLK_EnableXtalRC)
+    i.CLK_GetPLLClockFreq                    0x00000734   Section        0  uart.o(i.CLK_GetPLLClockFreq)
+    CLK_GetPLLClockFreq                      0x00000735   Thumb Code    70  uart.o(i.CLK_GetPLLClockFreq)
+    i.CLK_SetCoreClock                       0x0000078c   Section        0  clk.o(i.CLK_SetCoreClock)
+    i.CLK_SetHCLK                            0x00000804   Section        0  clk.o(i.CLK_SetHCLK)
+    i.CLK_SetModuleClock                     0x00000850   Section        0  clk.o(i.CLK_SetModuleClock)
+    i.CLK_SysTickLongDelay                   0x000008a0   Section        0  ptspta_inputoutput.o(i.CLK_SysTickLongDelay)
+    CLK_SysTickLongDelay                     0x000008a1   Thumb Code    50  ptspta_inputoutput.o(i.CLK_SysTickLongDelay)
+    i.CLK_SysTickLongDelay                   0x000008e0   Section        0  ptspta_isr.o(i.CLK_SysTickLongDelay)
+    CLK_SysTickLongDelay                     0x000008e1   Thumb Code    50  ptspta_isr.o(i.CLK_SysTickLongDelay)
+    i.CLK_WaitClockReady                     0x00000920   Section        0  clk.o(i.CLK_WaitClockReady)
+    i.CheckDirection                         0x0000094c   Section        0  ptspta_inputoutput.o(i.CheckDirection)
+    i.EINT0_IRQHandler                       0x00000a54   Section        0  ptspta_isr.o(i.EINT0_IRQHandler)
+    i.EraseFlash                             0x00000bb8   Section        0  ptspta_fmc.o(i.EraseFlash)
+    i.GPIOP0P1_IRQHandler                    0x00000bfc   Section        0  ptspta_isr.o(i.GPIOP0P1_IRQHandler)
+    i.GPIOP2P3P4_IRQHandler                  0x00001050   Section        0  ptspta_isr.o(i.GPIOP2P3P4_IRQHandler)
+    i.GPIO_EnableInt                         0x000010b4   Section        0  gpio.o(i.GPIO_EnableInt)
+    i.GPIO_Init                              0x000010d0   Section        0  ptspta_init.o(i.GPIO_Init)
+    i.GPIO_SetMode                           0x0000136c   Section        0  gpio.o(i.GPIO_SetMode)
+    i.GetADCValue                            0x00001394   Section        0  ptspta_adc.o(i.GetADCValue)
+    i.Hard_Fault_Handler                     0x000014fc   Section        0  retarget.o(i.Hard_Fault_Handler)
+    __tagsym$$used                           0x000014fd   Number         0  retarget.o(i.Hard_Fault_Handler)
+    i.I2C_Init                               0x00001524   Section        0  ptspta_init.o(i.I2C_Init)
+    i.LED_Flicker_B                          0x0000154c   Section        0  ptspta_isr.o(i.LED_Flicker_B)
+    i.Motor                                  0x00001660   Section        0  ptspta_motor.o(i.Motor)
+    i.MotorStart                             0x0000176c   Section        0  ptspta_motor.o(i.MotorStart)
+    i.Motor_Temperature_Check                0x00001888   Section        0  ptspta_protection.o(i.Motor_Temperature_Check)
+    i.NVIC_EnableIRQ                         0x0000196c   Section        0  ptspta_init.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x0000196d   Thumb Code    14  ptspta_init.o(i.NVIC_EnableIRQ)
+    i.NVIC_SetPriority                       0x00001980   Section        0  ptspta_main.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x00001981   Thumb Code    60  ptspta_main.o(i.NVIC_SetPriority)
+    i.OverCurrent_Check                      0x000019c4   Section        0  ptspta_protection.o(i.OverCurrent_Check)
+    i.PCB_Temperature_Check                  0x00001a94   Section        0  ptspta_protection.o(i.PCB_Temperature_Check)
+    i.PWM_ConfigOutputChannel                0x00001b50   Section        0  pwm.o(i.PWM_ConfigOutputChannel)
+    i.PWM_EnableOutput                       0x00001c90   Section        0  pwm.o(i.PWM_EnableOutput)
+    i.PWM_Init                               0x00001c98   Section        0  ptspta_init.o(i.PWM_Init)
+    i.PWM_Start                              0x00001dd4   Section        0  pwm.o(i.PWM_Start)
+    i.ReadFlashData                          0x00001dfc   Section        0  ptspta_fmc.o(i.ReadFlashData)
+    i.SYS_Init                               0x00001e30   Section        0  ptspta_main.o(i.SYS_Init)
+    i.SYS_ResetModule                        0x00001e58   Section        0  sys.o(i.SYS_ResetModule)
+    i.SYS_UnlockReg                          0x00001e74   Section        0  ptspta_fmc.o(i.SYS_UnlockReg)
+    SYS_UnlockReg                            0x00001e75   Thumb Code    26  ptspta_fmc.o(i.SYS_UnlockReg)
+    i.SaveData2Flash                         0x00001e94   Section        0  ptspta_fmc.o(i.SaveData2Flash)
+    i.SendChar_ToUART                        0x00001ed0   Section        0  retarget.o(i.SendChar_ToUART)
+    i.SetPWMCMR                              0x00001ef0   Section        0  ptspta_motor.o(i.SetPWMCMR)
+    i.SystemCoreClockUpdate                  0x00001f04   Section        0  system_m051series.o(i.SystemCoreClockUpdate)
+    i.SystemInit                             0x00001f94   Section        0  system_m051series.o(i.SystemInit)
+    i.TIMER_Init                             0x00001f98   Section        0  ptspta_init.o(i.TIMER_Init)
+    i.TMR0_IRQHandler                        0x00002018   Section        0  ptspta_isr.o(i.TMR0_IRQHandler)
+    i.TMR1_IRQHandler                        0x000025ec   Section        0  ptspta_isr.o(i.TMR1_IRQHandler)
+    i.UART0_Init                             0x000032c8   Section        0  ptspta_init.o(i.UART0_Init)
+    i.UART_Open                              0x000032fc   Section        0  uart.o(i.UART_Open)
+    i.Variable_Init                          0x00003384   Section        0  ptspta_init.o(i.Variable_Init)
+    i.WDT_Init                               0x0000345c   Section        0  ptspta_init.o(i.WDT_Init)
+    i.WDT_Open                               0x000034b0   Section        0  wdt.o(i.WDT_Open)
+    i.__0printf$5                            0x000034cc   Section        0  printf5.o(i.__0printf$5)
+    i.__ARM_common_switch8                   0x000034ec   Section        0  ptspta_inputoutput.o(i.__ARM_common_switch8)
+    i.__scatterload_copy                     0x00003506   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00003514   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00003516   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x00003524   Section        0  printf5.o(i._printf_core)
+    _printf_core                             0x00003525   Thumb Code   680  printf5.o(i._printf_core)
+    i.fputc                                  0x000037f8   Section        0  retarget.o(i.fputc)
+    i.main                                   0x00003804   Section        0  ptspta_main.o(i.main)
+    i.stackDump                              0x00003a54   Section        0  retarget.o(i.stackDump)
+    stackDump                                0x00003a55   Thumb Code    70  retarget.o(i.stackDump)
+    .constdata                               0x00003afc   Section       32  system_m051series.o(.constdata)
+    .constdata                               0x00003b1c   Section       48  uart.o(.constdata)
+    .constdata                               0x00003b4c   Section      168  pwm.o(.constdata)
+    .data                                    0x20000000   Section       12  system_m051series.o(.data)
+    .data                                    0x2000000c   Section        4  retarget.o(.data)
+    .data                                    0x20000010   Section        2  ptspta_adc.o(.data)
+    i_Arry                                   0x20000010   Data           1  ptspta_adc.o(.data)
+    ArryFull                                 0x20000011   Data           1  ptspta_adc.o(.data)
+    .data                                    0x20000014   Section       12  ptspta_inputoutput.o(.data)
+    S_BeforeMode                             0x20000014   Data           1  ptspta_inputoutput.o(.data)
+    S_KeepFlg                                0x20000015   Data           1  ptspta_inputoutput.o(.data)
+    mu8BuzCycle                              0x20000016   Data           1  ptspta_inputoutput.o(.data)
+    mu8DirBeforeStus                         0x20000017   Data           1  ptspta_inputoutput.o(.data)
+    S_Count                                  0x20000018   Data           4  ptspta_inputoutput.o(.data)
+    S_Count                                  0x2000001c   Data           4  ptspta_inputoutput.o(.data)
+    .data                                    0x20000020   Section       68  ptspta_isr.o(.data)
+    TurnOffLed                               0x20000020   Data           1  ptspta_isr.o(.data)
+    S_HallSensorCount                        0x20000021   Data           1  ptspta_isr.o(.data)
+    BefHallSensor                            0x20000022   Data           1  ptspta_isr.o(.data)
+    U_Phase                                  0x20000023   Data           1  ptspta_isr.o(.data)
+    V_Phase                                  0x20000024   Data           1  ptspta_isr.o(.data)
+    W_Phase                                  0x20000025   Data           1  ptspta_isr.o(.data)
+    S_1s                                     0x20000026   Data           1  ptspta_isr.o(.data)
+    S_Debounce10V5_11V                       0x20000027   Data           1  ptspta_isr.o(.data)
+    S_Flg_LowBattery                         0x20000028   Data           1  ptspta_isr.o(.data)
+    S_Flg_DirIsBrakeOf10V5_11V               0x20000029   Data           1  ptspta_isr.o(.data)
+    S_Flag                                   0x2000002a   Data           1  ptspta_isr.o(.data)
+    S_DownKey                                0x2000002b   Data           1  ptspta_isr.o(.data)
+    S_UPKey                                  0x2000002c   Data           1  ptspta_isr.o(.data)
+    mu8DoubleCount                           0x2000002d   Data           1  ptspta_isr.o(.data)
+    Count                                    0x20000030   Data           4  ptspta_isr.o(.data)
+    Times                                    0x20000034   Data           4  ptspta_isr.o(.data)
+    S_Count                                  0x20000038   Data           4  ptspta_isr.o(.data)
+    S_1ms                                    0x2000003c   Data           4  ptspta_isr.o(.data)
+    S_StartBtnDnCnt                          0x20000040   Data           4  ptspta_isr.o(.data)
+    S_StartBtnUpCnt                          0x20000044   Data           4  ptspta_isr.o(.data)
+    S_Debounce10V5                           0x20000048   Data           4  ptspta_isr.o(.data)
+    S_MiddleBrakeCnt                         0x2000004c   Data           4  ptspta_isr.o(.data)
+    .data                                    0x20000064   Section        4  ptspta_main.o(.data)
+    .data                                    0x20000068   Section        4  ptspta_main.o(.data)
+    .data                                    0x2000006c   Section        8  ptspta_main.o(.data)
+    .data                                    0x20000074   Section        8  ptspta_main.o(.data)
+    .data                                    0x2000007c   Section        8  ptspta_main.o(.data)
+    .data                                    0x20000084   Section        8  ptspta_main.o(.data)
+    .data                                    0x2000008c   Section        8  ptspta_main.o(.data)
+    .data                                    0x20000094   Section        8  ptspta_main.o(.data)
+    .data                                    0x2000009c   Section        8  ptspta_main.o(.data)
+    .data                                    0x200000a4   Section        8  ptspta_main.o(.data)
+    .data                                    0x200000ac   Section        8  ptspta_main.o(.data)
+    .data                                    0x200000b4   Section        8  ptspta_main.o(.data)
+    .data                                    0x200000bc   Section        8  ptspta_main.o(.data)
+    .data                                    0x200000c4   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000c5   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000c8   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000cc   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000d0   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000d4   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000d5   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000d6   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000d7   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000d8   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000d9   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000da   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000db   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000dc   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000e0   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000e4   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000e8   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000ec   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000f0   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000f4   Section        4  ptspta_main.o(.data)
+    .data                                    0x200000f8   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000f9   Section        1  ptspta_main.o(.data)
+    .data                                    0x200000fc   Section        4  ptspta_main.o(.data)
+    .data                                    0x20000100   Section        4  ptspta_main.o(.data)
+    .data                                    0x20000104   Section       12  ptspta_main.o(.data)
+    .data                                    0x20000110   Section        4  ptspta_main.o(.data)
+    .data                                    0x20000114   Section        1  ptspta_main.o(.data)
+    .data                                    0x20000118   Section        4  ptspta_main.o(.data)
+    .data                                    0x2000011c   Section        1  ptspta_main.o(.data)
+    .data                                    0x2000011d   Section        1  ptspta_main.o(.data)
+    .data                                    0x2000011e   Section        1  ptspta_main.o(.data)
+    .data                                    0x2000011f   Section        1  ptspta_main.o(.data)
+    .data                                    0x20000120   Section        1  ptspta_main.o(.data)
+    .data                                    0x20000124   Section       36  ptspta_protection.o(.data)
+    S_TempOver_80_Cnt                        0x20000124   Data           4  ptspta_protection.o(.data)
+    S_TempUnder_70_Cnt                       0x20000128   Data           4  ptspta_protection.o(.data)
+    S_TempOver_100_Cnt                       0x2000012c   Data           4  ptspta_protection.o(.data)
+    S_TempUnder_90_Cnt                       0x20000130   Data           4  ptspta_protection.o(.data)
+    S_OverCurrentShortCnt                    0x20000134   Data           4  ptspta_protection.o(.data)
+    S_OverCurrentOverLoadCnt                 0x20000138   Data           4  ptspta_protection.o(.data)
+    S_OverCurrentProtectCnt                  0x2000013c   Data           4  ptspta_protection.o(.data)
+    S_BatteryNormalCnt                       0x20000140   Data           4  ptspta_protection.o(.data)
+    S_BatteryErrorCnt                        0x20000144   Data           4  ptspta_protection.o(.data)
+    .bss                                     0x20000148   Section      120  ptspta_adc.o(.bss)
+    S_u32VoltageTemp                         0x20000148   Data         120  ptspta_adc.o(.bss)
+    STACK                                    0x200001c0   Section      512  startup_m051series.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  ptspta_main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_m051series.o(RESET)
+    _printf_a                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  stubs.o ABSOLUTE
+    __arm_fini_                               - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_lib_shutdown_fini                   0x000000d1   Thumb Code     0  entry12b.o(.ARM.Collect$$$$0000000E)
+    __rt_final_cpp                           0x000000d5   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000F)
+    __rt_final_exit                          0x000000d5   Thumb Code     0  entry11a.o(.ARM.Collect$$$$00000011)
+    HardFault_Handler                        0x000000d9   Thumb Code    24  retarget.o(.emb_text)
+    Reset_Handler                            0x000000f5   Thumb Code    32  startup_m051series.o(.text)
+    NMI_Handler                              0x00000115   Thumb Code     2  startup_m051series.o(.text)
+    SVC_Handler                              0x00000119   Thumb Code     2  startup_m051series.o(.text)
+    PendSV_Handler                           0x0000011b   Thumb Code     2  startup_m051series.o(.text)
+    SysTick_Handler                          0x0000011d   Thumb Code     2  startup_m051series.o(.text)
+    ACMP01_IRQHandler                        0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    ACMP23_IRQHandler                        0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    ADC_IRQHandler                           0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    BOD_IRQHandler                           0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    EINT1_IRQHandler                         0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    I2C0_IRQHandler                          0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    I2C1_IRQHandler                          0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    PWMA_IRQHandler                          0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    PWMB_IRQHandler                          0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    PWRWU_IRQHandler                         0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    RTC_IRQHandler                           0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    SPI0_IRQHandler                          0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    SPI1_IRQHandler                          0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    TMR2_IRQHandler                          0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    TMR3_IRQHandler                          0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    UART0_IRQHandler                         0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    UART1_IRQHandler                         0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    WDT_IRQHandler                           0x0000011f   Thumb Code     0  startup_m051series.o(.text)
+    __aeabi_uidiv                            0x00000141   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x00000141   Thumb Code    44  uidiv.o(.text)
+    __aeabi_memcpy                           0x0000016d   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x0000016d   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x0000016d   Thumb Code     0  memcpya.o(.text)
+    __aeabi_uldivmod                         0x00000191   Thumb Code    96  uldiv.o(.text)
+    __scatterload                            0x000001f1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000001f1   Thumb Code     0  init.o(.text)
+    __aeabi_llsl                             0x00000215   Thumb Code    32  llshl.o(.text)
+    _ll_shift_l                              0x00000215   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x00000235   Thumb Code    34  llushr.o(.text)
+    _ll_ushift_r                             0x00000235   Thumb Code     0  llushr.o(.text)
+    ADC2Voltage                              0x00000259   Thumb Code    16  ptspta_adc.o(i.ADC2Voltage)
+    ADC_Init                                 0x0000026d   Thumb Code    46  ptspta_init.o(i.ADC_Init)
+    ADC_Open                                 0x000002a5   Thumb Code    28  adc.o(i.ADC_Open)
+    Buzzer_LED_Behaving                      0x000002c9   Thumb Code   558  ptspta_inputoutput.o(i.Buzzer_LED_Behaving)
+    CLK_EnableModuleClock                    0x00000571   Thumb Code    24  clk.o(i.CLK_EnableModuleClock)
+    CLK_EnablePLL                            0x0000058d   Thumb Code   348  clk.o(i.CLK_EnablePLL)
+    CLK_EnableXtalRC                         0x00000725   Thumb Code    10  clk.o(i.CLK_EnableXtalRC)
+    CLK_SetCoreClock                         0x0000078d   Thumb Code   112  clk.o(i.CLK_SetCoreClock)
+    CLK_SetHCLK                              0x00000805   Thumb Code    72  clk.o(i.CLK_SetHCLK)
+    CLK_SetModuleClock                       0x00000851   Thumb Code    76  clk.o(i.CLK_SetModuleClock)
+    CLK_WaitClockReady                       0x00000921   Thumb Code    34  clk.o(i.CLK_WaitClockReady)
+    CheckDirection                           0x0000094d   Thumb Code   212  ptspta_inputoutput.o(i.CheckDirection)
+    EINT0_IRQHandler                         0x00000a55   Thumb Code   256  ptspta_isr.o(i.EINT0_IRQHandler)
+    EraseFlash                               0x00000bb9   Thumb Code    58  ptspta_fmc.o(i.EraseFlash)
+    GPIOP0P1_IRQHandler                      0x00000bfd   Thumb Code  1108  ptspta_isr.o(i.GPIOP0P1_IRQHandler)
+    GPIOP2P3P4_IRQHandler                    0x00001051   Thumb Code    46  ptspta_isr.o(i.GPIOP2P3P4_IRQHandler)
+    GPIO_EnableInt                           0x000010b5   Thumb Code    26  gpio.o(i.GPIO_EnableInt)
+    GPIO_Init                                0x000010d1   Thumb Code   608  ptspta_init.o(i.GPIO_Init)
+    GPIO_SetMode                             0x0000136d   Thumb Code    40  gpio.o(i.GPIO_SetMode)
+    GetADCValue                              0x00001395   Thumb Code   314  ptspta_adc.o(i.GetADCValue)
+    Hard_Fault_Handler                       0x000014fd   Thumb Code    16  retarget.o(i.Hard_Fault_Handler)
+    I2C_Init                                 0x00001525   Thumb Code    30  ptspta_init.o(i.I2C_Init)
+    LED_Flicker_B                            0x0000154d   Thumb Code   194  ptspta_isr.o(i.LED_Flicker_B)
+    Motor                                    0x00001661   Thumb Code   224  ptspta_motor.o(i.Motor)
+    MotorStart                               0x0000176d   Thumb Code   256  ptspta_motor.o(i.MotorStart)
+    Motor_Temperature_Check                  0x00001889   Thumb Code   158  ptspta_protection.o(i.Motor_Temperature_Check)
+    OverCurrent_Check                        0x000019c5   Thumb Code   168  ptspta_protection.o(i.OverCurrent_Check)
+    PCB_Temperature_Check                    0x00001a95   Thumb Code   122  ptspta_protection.o(i.PCB_Temperature_Check)
+    PWM_ConfigOutputChannel                  0x00001b51   Thumb Code   298  pwm.o(i.PWM_ConfigOutputChannel)
+    PWM_EnableOutput                         0x00001c91   Thumb Code     8  pwm.o(i.PWM_EnableOutput)
+    PWM_Init                                 0x00001c99   Thumb Code   214  ptspta_init.o(i.PWM_Init)
+    PWM_Start                                0x00001dd5   Thumb Code    38  pwm.o(i.PWM_Start)
+    ReadFlashData                            0x00001dfd   Thumb Code    44  ptspta_fmc.o(i.ReadFlashData)
+    SYS_Init                                 0x00001e31   Thumb Code    36  ptspta_main.o(i.SYS_Init)
+    SYS_ResetModule                          0x00001e59   Thumb Code    26  sys.o(i.SYS_ResetModule)
+    SaveData2Flash                           0x00001e95   Thumb Code    50  ptspta_fmc.o(i.SaveData2Flash)
+    SendChar_ToUART                          0x00001ed1   Thumb Code    26  retarget.o(i.SendChar_ToUART)
+    SetPWMCMR                                0x00001ef1   Thumb Code    12  ptspta_motor.o(i.SetPWMCMR)
+    SystemCoreClockUpdate                    0x00001f05   Thumb Code   116  system_m051series.o(i.SystemCoreClockUpdate)
+    SystemInit                               0x00001f95   Thumb Code     2  system_m051series.o(i.SystemInit)
+    TIMER_Init                               0x00001f99   Thumb Code   110  ptspta_init.o(i.TIMER_Init)
+    TMR0_IRQHandler                          0x00002019   Thumb Code  1446  ptspta_isr.o(i.TMR0_IRQHandler)
+    TMR1_IRQHandler                          0x000025ed   Thumb Code  3030  ptspta_isr.o(i.TMR1_IRQHandler)
+    UART0_Init                               0x000032c9   Thumb Code    40  ptspta_init.o(i.UART0_Init)
+    UART_Open                                0x000032fd   Thumb Code   120  uart.o(i.UART_Open)
+    Variable_Init                            0x00003385   Thumb Code   116  ptspta_init.o(i.Variable_Init)
+    WDT_Init                                 0x0000345d   Thumb Code    74  ptspta_init.o(i.WDT_Init)
+    WDT_Open                                 0x000034b1   Thumb Code    22  wdt.o(i.WDT_Open)
+    __0printf$5                              0x000034cd   Thumb Code    24  printf5.o(i.__0printf$5)
+    __1printf$5                              0x000034cd   Thumb Code     0  printf5.o(i.__0printf$5)
+    __2printf                                0x000034cd   Thumb Code     0  printf5.o(i.__0printf$5)
+    __ARM_common_switch8                     0x000034ed   Thumb Code    26  ptspta_inputoutput.o(i.__ARM_common_switch8)
+    __scatterload_copy                       0x00003507   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00003515   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00003517   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    fputc                                    0x000037f9   Thumb Code    12  retarget.o(i.fputc)
+    main                                     0x00003805   Thumb Code   336  ptspta_main.o(i.main)
+    gau32ClkSrcTbl                           0x00003afc   Data          32  system_m051series.o(.constdata)
+    Region$$Table$$Base                      0x00003bf4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00003c14   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_m051series.o(.data)
+    CyclesPerUs                              0x20000004   Data           4  system_m051series.o(.data)
+    PllClock                                 0x20000008   Data           4  system_m051series.o(.data)
+    __stdout                                 0x2000000c   Data           4  retarget.o(.data)
+    G_StallCnt                               0x20000050   Data           4  ptspta_isr.o(.data)
+    L_TargetCount                            0x20000054   Data           4  ptspta_isr.o(.data)
+    StartCMR                                 0x20000058   Data           4  ptspta_isr.o(.data)
+    S_MaxADC                                 0x2000005c   Data           4  ptspta_isr.o(.data)
+    S_MinADC                                 0x20000060   Data           4  ptspta_isr.o(.data)
+    G_Count                                  0x20000064   Data           4  ptspta_main.o(.data)
+    G_ID_Status                              0x20000068   Data           4  ptspta_main.o(.data)
+    TMR_MotorTempOverHeat_3S                 0x2000006c   Data           8  ptspta_main.o(.data)
+    TMR_PCBTempOverHeat_3S                   0x20000074   Data           8  ptspta_main.o(.data)
+    TMR_PWROff_3S                            0x2000007c   Data           8  ptspta_main.o(.data)
+    TMR_PWROff_24S                           0x20000084   Data           8  ptspta_main.o(.data)
+    TMR_Stop_10S                             0x2000008c   Data           8  ptspta_main.o(.data)
+    TMR_MotorRuning_1Min                     0x20000094   Data           8  ptspta_main.o(.data)
+    TMR_ID_OK                                0x2000009c   Data           8  ptspta_main.o(.data)
+    TMR_CalcRPM                              0x200000a4   Data           8  ptspta_main.o(.data)
+    TMR_MotorStall                           0x200000ac   Data           8  ptspta_main.o(.data)
+    TMR_ReStart300ms                         0x200000b4   Data           8  ptspta_main.o(.data)
+    TMR_Double_Enalbe                        0x200000bc   Data           8  ptspta_main.o(.data)
+    G_StartupDirectin                        0x200000c4   Data           1  ptspta_main.o(.data)
+    G_Direction                              0x200000c5   Data           1  ptspta_main.o(.data)
+    G_PwmCMR                                 0x200000c8   Data           4  ptspta_main.o(.data)
+    G_ScrewRPM                               0x200000cc   Data           4  ptspta_main.o(.data)
+    G_MotorRPM                               0x200000d0   Data           4  ptspta_main.o(.data)
+    G_MotorStatus                            0x200000d4   Data           1  ptspta_main.o(.data)
+    G_PCBStatus                              0x200000d5   Data           1  ptspta_main.o(.data)
+    G_BatteryStatus                          0x200000d6   Data           1  ptspta_main.o(.data)
+    G_Status_Item                            0x200000d7   Data           1  ptspta_main.o(.data)
+    G_BuzzerLED                              0x200000d8   Data           1  ptspta_main.o(.data)
+    G_ScrewLock                              0x200000d9   Data           1  ptspta_main.o(.data)
+    G_IsFirstBtnDwn                          0x200000da   Data           1  ptspta_main.o(.data)
+    G_3STimeOut                              0x200000db   Data           1  ptspta_main.o(.data)
+    StartButton                              0x200000dc   Data           4  ptspta_main.o(.data)
+    G_NTC_Motor                              0x200000e0   Data           4  ptspta_main.o(.data)
+    G_NTC_PCB                                0x200000e4   Data           4  ptspta_main.o(.data)
+    G_StartInAdc                             0x200000e8   Data           4  ptspta_main.o(.data)
+    G_Current                                0x200000ec   Data           4  ptspta_main.o(.data)
+    gu32MaxCurrent                           0x200000f0   Data           4  ptspta_main.o(.data)
+    gu32Current                              0x200000f4   Data           4  ptspta_main.o(.data)
+    gu8StartSpeed                            0x200000f8   Data           1  ptspta_main.o(.data)
+    gu8BrakeStop                             0x200000f9   Data           1  ptspta_main.o(.data)
+    gu32MAXPWM                               0x200000fc   Data           4  ptspta_main.o(.data)
+    gu32MINPWM                               0x20000100   Data           4  ptspta_main.o(.data)
+    gu32FastRpmQuarter                       0x20000104   Data           4  ptspta_main.o(.data)
+    gu32SlowRpmQuarter                       0x20000108   Data           4  ptspta_main.o(.data)
+    G_Voltage_Battery                        0x2000010c   Data           4  ptspta_main.o(.data)
+    gu32SlowRpmHalf                          0x20000110   Data           4  ptspta_main.o(.data)
+    gu8TurboCnt                              0x20000114   Data           1  ptspta_main.o(.data)
+    G_BrakeCurrent                           0x20000118   Data           4  ptspta_main.o(.data)
+    G_ClutchBrakFlow                         0x2000011c   Data           1  ptspta_main.o(.data)
+    G_Speed                                  0x2000011d   Data           1  ptspta_main.o(.data)
+    G_ReStar                                 0x2000011e   Data           1  ptspta_main.o(.data)
+    G_Flg_ButtonUp                           0x2000011f   Data           1  ptspta_main.o(.data)
+    G_Flg_ButtonDown                         0x20000120   Data           1  ptspta_main.o(.data)
+    __initial_sp                             0x200003c0   Data           0  startup_m051series.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000f5
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00003d5c, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003c14, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO           88    RESET               startup_m051series.o
+    0x000000c0   0x000000c0   0x00000000   Code   RO         1551  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x000000c0   0x00000004   Code   RO         1819    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x000000c4   0x00000004   Code   RO         1822    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO         1824    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO         1826    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x000000c8   0x00000008   Code   RO         1827    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x000000d0   0x00000004   Code   RO         1834    .ARM.Collect$$$$0000000E  mc_p.l(entry12b.o)
+    0x000000d4   0x000000d4   0x00000000   Code   RO         1829    .ARM.Collect$$$$0000000F  mc_p.l(entry10a.o)
+    0x000000d4   0x000000d4   0x00000000   Code   RO         1831    .ARM.Collect$$$$00000011  mc_p.l(entry11a.o)
+    0x000000d4   0x000000d4   0x00000004   Code   RO         1820    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d8   0x000000d8   0x0000001c   Code   RO           95    .emb_text           retarget.o
+    0x000000f4   0x000000f4   0x0000004c   Code   RO           89  * .text               startup_m051series.o
+    0x00000140   0x00000140   0x0000002c   Code   RO         1552    .text               mc_p.l(uidiv.o)
+    0x0000016c   0x0000016c   0x00000024   Code   RO         1554    .text               mc_p.l(memcpya.o)
+    0x00000190   0x00000190   0x00000060   Code   RO         1835    .text               mc_p.l(uldiv.o)
+    0x000001f0   0x000001f0   0x00000024   Code   RO         1848    .text               mc_p.l(init.o)
+    0x00000214   0x00000214   0x00000020   Code   RO         1850    .text               mc_p.l(llshl.o)
+    0x00000234   0x00000234   0x00000022   Code   RO         1852    .text               mc_p.l(llushr.o)
+    0x00000256   0x00000256   0x00000002   PAD
+    0x00000258   0x00000258   0x00000014   Code   RO         1029    i.ADC2Voltage       ptspta_adc.o
+    0x0000026c   0x0000026c   0x00000038   Code   RO         1116    i.ADC_Init          ptspta_init.o
+    0x000002a4   0x000002a4   0x00000024   Code   RO          742    i.ADC_Open          adc.o
+    0x000002c8   0x000002c8   0x000002a8   Code   RO         1195    i.Buzzer_LED_Behaving  ptspta_inputoutput.o
+    0x00000570   0x00000570   0x0000001c   Code   RO          244    i.CLK_EnableModuleClock  clk.o
+    0x0000058c   0x0000058c   0x00000198   Code   RO          245    i.CLK_EnablePLL     clk.o
+    0x00000724   0x00000724   0x00000010   Code   RO          247    i.CLK_EnableXtalRC  clk.o
+    0x00000734   0x00000734   0x00000058   Code   RO          450    i.CLK_GetPLLClockFreq  uart.o
+    0x0000078c   0x0000078c   0x00000078   Code   RO          254    i.CLK_SetCoreClock  clk.o
+    0x00000804   0x00000804   0x0000004c   Code   RO          255    i.CLK_SetHCLK       clk.o
+    0x00000850   0x00000850   0x00000050   Code   RO          256    i.CLK_SetModuleClock  clk.o
+    0x000008a0   0x000008a0   0x00000040   Code   RO         1196    i.CLK_SysTickLongDelay  ptspta_inputoutput.o
+    0x000008e0   0x000008e0   0x00000040   Code   RO         1257    i.CLK_SysTickLongDelay  ptspta_isr.o
+    0x00000920   0x00000920   0x0000002c   Code   RO          258    i.CLK_WaitClockReady  clk.o
+    0x0000094c   0x0000094c   0x00000108   Code   RO         1197    i.CheckDirection    ptspta_inputoutput.o
+    0x00000a54   0x00000a54   0x00000164   Code   RO         1258    i.EINT0_IRQHandler  ptspta_isr.o
+    0x00000bb8   0x00000bb8   0x00000044   Code   RO         1070    i.EraseFlash        ptspta_fmc.o
+    0x00000bfc   0x00000bfc   0x00000454   Code   RO         1259    i.GPIOP0P1_IRQHandler  ptspta_isr.o
+    0x00001050   0x00001050   0x00000064   Code   RO         1260    i.GPIOP2P3P4_IRQHandler  ptspta_isr.o
+    0x000010b4   0x000010b4   0x0000001a   Code   RO          192    i.GPIO_EnableInt    gpio.o
+    0x000010ce   0x000010ce   0x00000002   PAD
+    0x000010d0   0x000010d0   0x0000029c   Code   RO         1117    i.GPIO_Init         ptspta_init.o
+    0x0000136c   0x0000136c   0x00000028   Code   RO          193    i.GPIO_SetMode      gpio.o
+    0x00001394   0x00001394   0x00000168   Code   RO         1030    i.GetADCValue       ptspta_adc.o
+    0x000014fc   0x000014fc   0x00000028   Code   RO           97    i.Hard_Fault_Handler  retarget.o
+    0x00001524   0x00001524   0x00000028   Code   RO         1118    i.I2C_Init          ptspta_init.o
+    0x0000154c   0x0000154c   0x00000114   Code   RO         1261    i.LED_Flicker_B     ptspta_isr.o
+    0x00001660   0x00001660   0x0000010c   Code   RO         1430    i.Motor             ptspta_motor.o
+    0x0000176c   0x0000176c   0x0000011c   Code   RO         1431    i.MotorStart        ptspta_motor.o
+    0x00001888   0x00001888   0x000000e4   Code   RO         1515    i.Motor_Temperature_Check  ptspta_protection.o
+    0x0000196c   0x0000196c   0x00000014   Code   RO         1119    i.NVIC_EnableIRQ    ptspta_init.o
+    0x00001980   0x00001980   0x00000044   Code   RO         1336    i.NVIC_SetPriority  ptspta_main.o
+    0x000019c4   0x000019c4   0x000000d0   Code   RO         1516    i.OverCurrent_Check  ptspta_protection.o
+    0x00001a94   0x00001a94   0x000000bc   Code   RO         1517    i.PCB_Temperature_Check  ptspta_protection.o
+    0x00001b50   0x00001b50   0x00000140   Code   RO          565    i.PWM_ConfigOutputChannel  pwm.o
+    0x00001c90   0x00001c90   0x00000008   Code   RO          578    i.PWM_EnableOutput  pwm.o
+    0x00001c98   0x00001c98   0x0000013c   Code   RO         1120    i.PWM_Init          ptspta_init.o
+    0x00001dd4   0x00001dd4   0x00000026   Code   RO          585    i.PWM_Start         pwm.o
+    0x00001dfa   0x00001dfa   0x00000002   PAD
+    0x00001dfc   0x00001dfc   0x00000034   Code   RO         1071    i.ReadFlashData     ptspta_fmc.o
+    0x00001e30   0x00001e30   0x00000028   Code   RO         1337    i.SYS_Init          ptspta_main.o
+    0x00001e58   0x00001e58   0x0000001a   Code   RO          385    i.SYS_ResetModule   sys.o
+    0x00001e72   0x00001e72   0x00000002   PAD
+    0x00001e74   0x00001e74   0x00000020   Code   RO         1072    i.SYS_UnlockReg     ptspta_fmc.o
+    0x00001e94   0x00001e94   0x0000003c   Code   RO         1073    i.SaveData2Flash    ptspta_fmc.o
+    0x00001ed0   0x00001ed0   0x00000020   Code   RO          100    i.SendChar_ToUART   retarget.o
+    0x00001ef0   0x00001ef0   0x00000014   Code   RO         1432    i.SetPWMCMR         ptspta_motor.o
+    0x00001f04   0x00001f04   0x00000090   Code   RO            3    i.SystemCoreClockUpdate  system_m051series.o
+    0x00001f94   0x00001f94   0x00000002   Code   RO            4    i.SystemInit        system_m051series.o
+    0x00001f96   0x00001f96   0x00000002   PAD
+    0x00001f98   0x00001f98   0x00000080   Code   RO         1121    i.TIMER_Init        ptspta_init.o
+    0x00002018   0x00002018   0x000005d4   Code   RO         1263    i.TMR0_IRQHandler   ptspta_isr.o
+    0x000025ec   0x000025ec   0x00000cdc   Code   RO         1264    i.TMR1_IRQHandler   ptspta_isr.o
+    0x000032c8   0x000032c8   0x00000034   Code   RO         1122    i.UART0_Init        ptspta_init.o
+    0x000032fc   0x000032fc   0x00000088   Code   RO          457    i.UART_Open         uart.o
+    0x00003384   0x00003384   0x000000d8   Code   RO         1123    i.Variable_Init     ptspta_init.o
+    0x0000345c   0x0000345c   0x00000054   Code   RO         1124    i.WDT_Init          ptspta_init.o
+    0x000034b0   0x000034b0   0x0000001c   Code   RO         1009    i.WDT_Open          wdt.o
+    0x000034cc   0x000034cc   0x00000020   Code   RO         1691    i.__0printf$5       mc_p.l(printf5.o)
+    0x000034ec   0x000034ec   0x0000001a   Code   RO         1235    i.__ARM_common_switch8  ptspta_inputoutput.o
+    0x00003506   0x00003506   0x0000000e   Code   RO         1862    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00003514   0x00003514   0x00000002   Code   RO         1863    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00003516   0x00003516   0x0000000e   Code   RO         1864    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00003524   0x00003524   0x000002d4   Code   RO         1698    i._printf_core      mc_p.l(printf5.o)
+    0x000037f8   0x000037f8   0x0000000c   Code   RO          104    i.fputc             retarget.o
+    0x00003804   0x00003804   0x00000250   Code   RO         1338    i.main              ptspta_main.o
+    0x00003a54   0x00003a54   0x000000a8   Code   RO          106    i.stackDump         retarget.o
+    0x00003afc   0x00003afc   0x00000020   Data   RO            5    .constdata          system_m051series.o
+    0x00003b1c   0x00003b1c   0x00000030   Data   RO          465    .constdata          uart.o
+    0x00003b4c   0x00003b4c   0x000000a8   Data   RO          587    .constdata          pwm.o
+    0x00003bf4   0x00003bf4   0x00000020   Data   RO         1860    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00003c14, Size: 0x00000148, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00003c14   0x0000000c   Data   RW            6    .data               system_m051series.o
+    0x2000000c   0x00003c20   0x00000004   Data   RW          107    .data               retarget.o
+    0x20000010   0x00003c24   0x00000002   Data   RW         1032    .data               ptspta_adc.o
+    0x20000012   0x00003c26   0x00000002   PAD
+    0x20000014   0x00003c28   0x0000000c   Data   RW         1200    .data               ptspta_inputoutput.o
+    0x20000020   0x00003c34   0x00000044   Data   RW         1265    .data               ptspta_isr.o
+    0x20000064   0x00003c78   0x00000004   Data   RW         1339    .data               ptspta_main.o
+    0x20000068   0x00003c7c   0x00000004   Data   RW         1340    .data               ptspta_main.o
+    0x2000006c   0x00003c80   0x00000008   Data   RW         1341    .data               ptspta_main.o
+    0x20000074   0x00003c88   0x00000008   Data   RW         1342    .data               ptspta_main.o
+    0x2000007c   0x00003c90   0x00000008   Data   RW         1343    .data               ptspta_main.o
+    0x20000084   0x00003c98   0x00000008   Data   RW         1344    .data               ptspta_main.o
+    0x2000008c   0x00003ca0   0x00000008   Data   RW         1345    .data               ptspta_main.o
+    0x20000094   0x00003ca8   0x00000008   Data   RW         1346    .data               ptspta_main.o
+    0x2000009c   0x00003cb0   0x00000008   Data   RW         1347    .data               ptspta_main.o
+    0x200000a4   0x00003cb8   0x00000008   Data   RW         1348    .data               ptspta_main.o
+    0x200000ac   0x00003cc0   0x00000008   Data   RW         1349    .data               ptspta_main.o
+    0x200000b4   0x00003cc8   0x00000008   Data   RW         1350    .data               ptspta_main.o
+    0x200000bc   0x00003cd0   0x00000008   Data   RW         1351    .data               ptspta_main.o
+    0x200000c4   0x00003cd8   0x00000001   Data   RW         1352    .data               ptspta_main.o
+    0x200000c5   0x00003cd9   0x00000001   Data   RW         1353    .data               ptspta_main.o
+    0x200000c6   0x00003cda   0x00000002   PAD
+    0x200000c8   0x00003cdc   0x00000004   Data   RW         1355    .data               ptspta_main.o
+    0x200000cc   0x00003ce0   0x00000004   Data   RW         1356    .data               ptspta_main.o
+    0x200000d0   0x00003ce4   0x00000004   Data   RW         1357    .data               ptspta_main.o
+    0x200000d4   0x00003ce8   0x00000001   Data   RW         1359    .data               ptspta_main.o
+    0x200000d5   0x00003ce9   0x00000001   Data   RW         1360    .data               ptspta_main.o
+    0x200000d6   0x00003cea   0x00000001   Data   RW         1361    .data               ptspta_main.o
+    0x200000d7   0x00003ceb   0x00000001   Data   RW         1362    .data               ptspta_main.o
+    0x200000d8   0x00003cec   0x00000001   Data   RW         1364    .data               ptspta_main.o
+    0x200000d9   0x00003ced   0x00000001   Data   RW         1365    .data               ptspta_main.o
+    0x200000da   0x00003cee   0x00000001   Data   RW         1367    .data               ptspta_main.o
+    0x200000db   0x00003cef   0x00000001   Data   RW         1368    .data               ptspta_main.o
+    0x200000dc   0x00003cf0   0x00000004   Data   RW         1369    .data               ptspta_main.o
+    0x200000e0   0x00003cf4   0x00000004   Data   RW         1370    .data               ptspta_main.o
+    0x200000e4   0x00003cf8   0x00000004   Data   RW         1371    .data               ptspta_main.o
+    0x200000e8   0x00003cfc   0x00000004   Data   RW         1373    .data               ptspta_main.o
+    0x200000ec   0x00003d00   0x00000004   Data   RW         1374    .data               ptspta_main.o
+    0x200000f0   0x00003d04   0x00000004   Data   RW         1375    .data               ptspta_main.o
+    0x200000f4   0x00003d08   0x00000004   Data   RW         1376    .data               ptspta_main.o
+    0x200000f8   0x00003d0c   0x00000001   Data   RW         1377    .data               ptspta_main.o
+    0x200000f9   0x00003d0d   0x00000001   Data   RW         1378    .data               ptspta_main.o
+    0x200000fa   0x00003d0e   0x00000002   PAD
+    0x200000fc   0x00003d10   0x00000004   Data   RW         1379    .data               ptspta_main.o
+    0x20000100   0x00003d14   0x00000004   Data   RW         1380    .data               ptspta_main.o
+    0x20000104   0x00003d18   0x0000000c   Data   RW         1381    .data               ptspta_main.o
+    0x20000110   0x00003d24   0x00000004   Data   RW         1382    .data               ptspta_main.o
+    0x20000114   0x00003d28   0x00000001   Data   RW         1383    .data               ptspta_main.o
+    0x20000115   0x00003d29   0x00000003   PAD
+    0x20000118   0x00003d2c   0x00000004   Data   RW         1384    .data               ptspta_main.o
+    0x2000011c   0x00003d30   0x00000001   Data   RW         1385    .data               ptspta_main.o
+    0x2000011d   0x00003d31   0x00000001   Data   RW         1386    .data               ptspta_main.o
+    0x2000011e   0x00003d32   0x00000001   Data   RW         1388    .data               ptspta_main.o
+    0x2000011f   0x00003d33   0x00000001   Data   RW         1389    .data               ptspta_main.o
+    0x20000120   0x00003d34   0x00000001   Data   RW         1390    .data               ptspta_main.o
+    0x20000121   0x00003d35   0x00000003   PAD
+    0x20000124   0x00003d38   0x00000024   Data   RW         1518    .data               ptspta_protection.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000148, Load base: 0x00003d5c, Size: 0x00000278, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000148        -       0x00000078   Zero   RW         1031    .bss                ptspta_adc.o
+    0x200001c0        -       0x00000200   Zero   RW           86    STACK               startup_m051series.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        36          8          0          0          0       1003   adc.o
+       772         96          0          0          0       6223   clk.o
+        66          0          0          0          0      52308   gpio.o
+       380         50          0          2        120       7944   ptspta_adc.o
+       212         34          0          0          0      13830   ptspta_fmc.o
+      1580        328          0          0          0      24866   ptspta_init.o
+      1034        206          0         12          0       8162   ptspta_inputoutput.o
+      6688       1376          0         68          0      13011   ptspta_isr.o
+       700        268          0        182          0      11579   ptspta_main.o
+       572         90          0          0          0      14985   ptspta_motor.o
+       624        176          0         36          0       3073   ptspta_protection.o
+       366         22        168          0          0       2961   pwm.o
+       280        132          0          4          0       4982   retarget.o
+        76         32        192          0        512        680   startup_m051series.o
+        26          0          0          0          0        534   sys.o
+       146         28         32         12          0      63963   system_m051series.o
+       224         34         48          0          0       7920   uart.o
+        28          6          0          0          0        679   wdt.o
+
+    ----------------------------------------------------------------------
+     13818       2886        472        328        632     238703   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         8          0          0         12          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         4          0          0          0          0          0   entry12b.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        32          0          0          0          0         68   llshl.o
+        34          0          0          0          0         68   llushr.o
+        36          0          0          0          0         60   memcpya.o
+       756         52          0          0          0        168   printf5.o
+        44          0          0          0          0         72   uidiv.o
+        96          0          0          0          0         84   uldiv.o
+
+    ----------------------------------------------------------------------
+      1090         68          0          0          0        588   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1088         68          0          0          0        588   mc_p.l
+
+    ----------------------------------------------------------------------
+      1090         68          0          0          0        588   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     14908       2954        472        328        632     236751   Grand Totals
+     14908       2954        472        328        632     236751   ELF Image Totals
+     14908       2954        472        328          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                15380 (  15.02kB)
+    Total RW  Size (RW Data + ZI Data)               960 (   0.94kB)
+    Total ROM Size (Code + RO Data + RW Data)      15708 (  15.34kB)
+
+==============================================================================
+

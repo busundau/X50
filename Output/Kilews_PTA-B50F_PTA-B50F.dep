@@ -1,0 +1,433 @@
+Dependencies for Project 'Kilews_PTA-B50F', Target 'PTA-B50F': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\CMSIS\system_M051Series.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\system_m051series.o --omf_browse .\output\system_m051series.crf --depend .\output\system_m051series.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\CMSIS\startup_M051Series.s)(0x66FF97AC)(--cpu Cortex-M0 -g --16 --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 538"--list .\output\startup_m051series.lst --xref -o .\output\startup_m051series.o --depend .\output\startup_m051series.d)
+F (.\Library\retarget.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\retarget.o --omf_browse .\output\retarget.crf --depend .\output\retarget.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\gpio.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\gpio.o --omf_browse .\output\gpio.crf --depend .\output\gpio.d)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\clk.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\clk.o --omf_browse .\output\clk.crf --depend .\output\clk.d)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\sys.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\sys.o --omf_browse .\output\sys.crf --depend .\output\sys.d)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\uart.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\uart.o --omf_browse .\output\uart.crf --depend .\output\uart.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\pwm.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\pwm.o --omf_browse .\output\pwm.crf --depend .\output\pwm.d)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\adc.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\adc.o --omf_browse .\output\adc.crf --depend .\output\adc.d)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\i2c.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\i2c.o --omf_browse .\output\i2c.crf --depend .\output\i2c.d)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\fmc.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\fmc.o --omf_browse .\output\fmc.crf --depend .\output\fmc.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Library\wdt.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\wdt.o --omf_browse .\output\wdt.crf --depend .\output\wdt.d)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+F (.\Source\PtsPta_ADC.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_adc.o --omf_browse .\output\ptspta_adc.crf --depend .\output\ptspta_adc.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+F (.\Source\PtsPta_FMC.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_fmc.o --omf_browse .\output\ptspta_fmc.crf --depend .\output\ptspta_fmc.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+F (.\Source\PtsPta_Init.c)(0x694E6124)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_init.o --omf_browse .\output\ptspta_init.crf --depend .\output\ptspta_init.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+F (.\Source\PtsPta_InputOutput.c)(0x695C97B4)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_inputoutput.o --omf_browse .\output\ptspta_inputoutput.crf --depend .\output\ptspta_inputoutput.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+I (.\Include\PtsPta_FMC.h)(0x66FF97AC)
+I (.\Include\PtsPta_Init.h)(0x66FF97AC)
+F (.\Source\PtsPta_ISR.c)(0x695E0140)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_isr.o --omf_browse .\output\ptspta_isr.crf --depend .\output\ptspta_isr.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+I (.\Include\PtsPta_ADC.h)(0x66FF97AC)
+I (.\Include\PtsPta_InputOutput.h)(0x66FF97AC)
+I (.\Include\PtsPta_NVRAM.h)(0x66FF97AC)
+I (.\Include\PtsPta_FMC.h)(0x66FF97AC)
+I (.\Include\PtsPta_Protection.h)(0x66FF97AC)
+I (.\Include\PtsPta_Init.h)(0x66FF97AC)
+F (.\Source\PtsPta_main.c)(0x695DFB43)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_main.o --omf_browse .\output\ptspta_main.crf --depend .\output\ptspta_main.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_Value.h)(0x694A33CC)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+I (.\Include\PtsPta_Init.h)(0x66FF97AC)
+I (.\Include\PtsPta_InputOutput.h)(0x66FF97AC)
+I (.\Include\PtsPta_NVRAM.h)(0x66FF97AC)
+I (.\Include\PtsPta_FMC.h)(0x66FF97AC)
+I (.\Include\PtsPta_ADC.h)(0x66FF97AC)
+I (.\Include\pid.h)(0x68B7EE42)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+F (.\Source\PtsPta_Motor.c)(0x694A6578)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_motor.o --omf_browse .\output\ptspta_motor.crf --depend .\output\ptspta_motor.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+F (.\Source\PtsPta_NVRAM.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_nvram.o --omf_browse .\output\ptspta_nvram.crf --depend .\output\ptspta_nvram.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+F (.\Source\PtsPta_Protection.c)(0x66FF97AC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\ptspta_protection.o --omf_browse .\output\ptspta_protection.crf --depend .\output\ptspta_protection.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+F (.\Source\pid.c)(0x695F4C3C)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DPOLES2_SLOTS6 -DScrewType="_PTA_X50F" -DIDByPass="FALSE" -DClutchBrakeWithBuzzer="TRUE"-o .\output\pid.o --omf_browse .\output\pid.crf --depend .\output\pid.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (.\Include\M051Series.h)(0x66FF97AC)
+I (.\Include\core_cm0.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (.\Include\core_cmInstr.h)(0x66FF97AC)
+I (.\Include\core_cmFunc.h)(0x66FF97AC)
+I (.\Include\system_M051Series.h)(0x66FF97AC)
+I (.\Include\sys.h)(0x66FF97AC)
+I (.\Include\clk.h)(0x66FF97AC)
+I (.\Include\adc.h)(0x66FF97AC)
+I (.\Include\fmc.h)(0x66FF97AC)
+I (.\Include\gpio.h)(0x66FF97AC)
+I (.\Include\i2c.h)(0x66FF97AC)
+I (.\Include\pwm.h)(0x66FF97AC)
+I (.\Include\timer.h)(0x66FF97AC)
+I (.\Include\wdt.h)(0x66FF97AC)
+I (.\Include\uart.h)(0x66FF97AC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\Include\PtsPta_TypeDef.h)(0x694CD27C)
+I (.\Include\PtsPta_Motor.h)(0x66FF97AC)
+I (.\Include\PtsPta_Global.h)(0x66FF97AC)
+I (.\Include\pid.h)(0x68B7EE42)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)

@@ -1,0 +1,72 @@
+<html>
+<body>
+<pre>
+<h1>猩ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: cc cc, cc, LIC=FQQMA-1P5CH-06LQU-SEM6R-ZEPBA-SMHDL
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      Nu_Link.dll V3.21
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Users\busundau\Pictures\新改三個程式\20251223-103_PTA-X50F_新增pid\Kilews_PTA-B50F.uvproj
+Project File Date:  12/23/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'PTA-B50F'
+Before Build - User command #1: del_bin_hex.bat
+C:\Users\busundau\Pictures\新改三個程式\20251223-103_PTA-X50F_新增pid>del /Q .\Output\*.bin 
+C:\Users\busundau\Pictures\新改三個程式\20251223-103_PTA-X50F_新增pid>del /Q .\Output\*.hex 
+creating preprocessor file for pid.c...
+compiling pid.c...
+Source\pid.c(12): warning:  #1295-D: Deprecated declaration Motor_Control_cw_Task - give arg types
+  void Motor_Control_cw_Task();
+Source\pid.c(13): warning:  #1295-D: Deprecated declaration Motor_Control_ccw_Task - give arg types
+  void Motor_Control_ccw_Task();
+Source\pid.c(257): warning:  #177-D: variable "rpm_drop"  was declared but never referenced
+      bool rpm_drop;
+Source\pid.c(258): warning:  #177-D: variable "i"  was declared but never referenced
+      uint8_t i;
+Source\pid.c(259): warning:  #177-D: variable "cur_rise"  was declared but never referenced
+      bool cur_rise;
+Source\pid.c(326): warning:  #177-D: variable "rpm_drop"  was declared but never referenced
+      bool rpm_drop;
+Source\pid.c(327): warning:  #177-D: variable "i"  was declared but never referenced
+      uint8_t i;
+Source\pid.c(328): warning:  #177-D: variable "cur_rise"  was declared but never referenced
+      bool cur_rise;
+Source\pid.c(710): warning:  #177-D: variable "i2"  was declared but never referenced
+      int i, i2;
+Source\pid.c(831): warning:  #223-D: function "Buzzer_LED_Behaving" declared implicitly
+              Buzzer_LED_Behaving(&G_BuzzerLED);
+Source\pid.c(840): warning:  #223-D: function "Buzzer_LED_Behaving" declared implicitly
+              Buzzer_LED_Behaving(&G_BuzzerLED);
+Source\pid.c(1099): warning:  #1-D: last line of file ends without a newline
+  }
+Source\pid.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=17152 RO-data=472 RW-data=2952 ZI-data=784  
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin ".\Output\PTA-B50F_M051.axf" --output ".\Output\PTA-B50F_M051.bin"
+After Build - User command #2: .\hello.bat
+[Keil Build] HEX file: .\Output\PTA-B50F_M051.hex
+[Keil Build] CRC32 = 0xE218ACB0
+[Keil Build] Copied to: C:\Users\busundau\Pictures\新改三個程式\20251223-103_PTA-X50F_新增pid\Output\..\Output2\PTA-B50F_M051_20251223-174051_crcE218ACB0.hex
+".\Output\PTA-B50F_M051.axf" - 0 Error(s), 12 Warning(s).
+Build Time Elapsed:  00:00:19
+</pre>
+</body>
+</html>

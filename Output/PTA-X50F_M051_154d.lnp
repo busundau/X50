@@ -1,0 +1,27 @@
+--cpu Cortex-M0
+".\output\system_m051series.o"
+".\output\startup_m051series.o"
+".\output\retarget.o"
+".\output\gpio.o"
+".\output\clk.o"
+".\output\sys.o"
+".\output\uart.o"
+".\output\pwm.o"
+".\output\adc.o"
+".\output\i2c.o"
+".\output\fmc.o"
+".\output\wdt.o"
+".\output\ptspta_adc.o"
+".\output\ptspta_fmc.o"
+".\output\ptspta_init.o"
+".\output\ptspta_inputoutput.o"
+".\output\ptspta_isr.o"
+".\output\ptspta_main.o"
+".\output\ptspta_motor.o"
+".\output\ptspta_nvram.o"
+".\output\ptspta_protection.o"
+".\output\pid.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
+--map --first='startup_M051Series.o(RESET)' --datacompressor=off --info=inline --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Output\PTA-X50F_M051_154d.map" -o .\Output\PTA-X50F_M051_154d.axf

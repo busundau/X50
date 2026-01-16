@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "PRJCMD.C": "cpp",
+        "PRJBARCODE.C": "cpp",
+        "incconfig.h": "c"
+    }
+}
